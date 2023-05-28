@@ -6,7 +6,7 @@ const Chart = (props) => {
   const totalMaximum = Math.max(...dataPointValues);
   //in max function it can only read numbers not arrays so we uses spread operators to get the numbers individualy from the dataPointValue
   return (
-    <div className="Chart">
+    <div className="chart">
       {props.dataPoints.map((dataPoint) => (
         <ChartBar
           key={dataPoint.label}
