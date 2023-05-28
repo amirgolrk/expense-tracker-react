@@ -1,0 +1,23 @@
+1-check the way of using conditioanal state in new Expense to show or hide the from  : 
+This is the return statement that returns the JSX to render on the page. It includes a conditional rendering of either the "Add New Expense" button or the ExpenseForm component based on the value of isEditing.
+When isEditing is false, the "Add New Expense" button is rendered. When the button is clicked, the startEditingHandler function is triggered, which sets isEditing to true and renders the ExpenseForm component.
+When isEditing is true, the ExpenseForm component is rendered with the saveExpenseDataHandler and stopEditingHandler functions passed as props. When the user submits the form, the saveExpenseDataHandler function is triggered to add the new expense data to the list of expenses and set isEditing to false. If the user cancels the form, the stopEditingHandler function is triggered to set isEditing to `false 
+/////////////////////////////////////////////////////
+2-in ExpenseDate look at the use of date and getting the right format of year/day/month .  
+/////////////////////////////////////////////////////
+3-a custom component always retuns props by default. even if we dont mention it,we always have props. like  in Card component we used props to add the additional class we want; but in some cases we dont need to add a additional class so the card class is enough . 
+////////////////////////////////////////////////////
+4-correct way of using useState is important. first use of it was in ExpenseForm when we wanted to get the value of inputs .  
+////////////////////////////////////////////////////
+5-we should use two way binding in our projects it will both send the data to its parent and gets the data from the parent at the same time; so it keeps our webPage up to date 
+/////////////////////////////////////////////////////
+6-in ExpenseForm we could simply reset the form using form.reset but we used two way binding to both reset and keep our files updated . in the submit at the end with returning ('') to set items we actually are reseting the form .  
+/////////////////////////////////////////////////////
+7-syntax of conditional state in NewExpense for showing or hiding the form is important
+/////////////////////////////////////////////////////
+8-pay attention to way of using useState in App.js : we could simply use 'setExpenses([expense,...expenses])'  but in very rar cases it can cause propblem so we used function in setExpenses to avoid any problem . 
+/////////////////////////////////////////////////////
+9-in New Expenses pay attention in how we implemented our opening and closing form . at first its false and we have just add Expense button . then when click it it changes to true and form opens . when we fill the form and submit it ,it changes to false and the form closes . and with clicking cancel  it changes to false and closes again . (professional explain in number 1) . 
+/////////////////////////////////////////////////
+10- in chartBar.js we used js for styling the height of barFill 
+////////////////////////////////////////////////////
